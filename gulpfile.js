@@ -125,7 +125,7 @@ gulp.task('templates', function () {
 gulp.task('oauth', function () {
   mkdirp(dist);
   return new Promise((res, rej) => {
-    exec('[ -f oauth.json ] && echo "Using existing oauth.json." || curl "https://raw.githubusercontent.com/goooooouwa/prose/gh-pages/oauth.json" > oauth.json', (error, stdout, stderr) => {
+    exec('[ -f oauth.json ] && echo "Using existing oauth.json." || curl "https://raw.githubusercontent.com/goooooouwa/gatekeeper/refs/heads/development/oauth.json" > oauth.json', (error, stdout, stderr) => {
       if (error) {
         console.error(`exec error: ${error}`);
         return rej(error);
